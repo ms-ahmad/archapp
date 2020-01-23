@@ -43,6 +43,32 @@
 									});
 		});
 		
+
+
+
+
+	
+        function add() {
+            var xhr = new XMLHttpRequest();
+            var user_name = document.getElementById("user_name").value;
+            var user_name = document.getElementById("user_name").value;
+            var check = document.getElementById("check").value;
+
+            xhr.onreadystatechange = function() {
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    document.getElementById("show").innerHTML = xhr.responseText;
+                    redirction();
+                }
+            };
+            xhr.open("POST", "../user/login_page.php", true);
+            xhr.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+            xhr.send("&user_name=" + user_name + "&user_name=" + user_name + "&check=" + check);
+        }
+
+        function all_function() {
+            add();
+            cleartext();
+        }
 		</script>
 
 
@@ -114,12 +140,176 @@ text-align:justify;
 
 </head>
 <body>
-    <div class="jumbotron text-center headerdiv" style="margin-bottom:0">
+    <div class="jumbotron text-center headerdiv" style="margin-bottom:0";>
         <h1>الأرشفة</h1>
-
+		<button onclick="document.getElementById('id01').style.display='block'" style="width:auto; float:right">تسجيل الدخول</button>
       
           
     </div>
+
+
+<!-- //////////////////////////////////////////////// -->
+
+
+<style>
+/* Full-width input fields */
+input[type=text], input[type=password] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #4CAF50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  width: auto;
+  padding: 10px 18px;
+  background-color: #f44336;
+}
+
+/* Center the image and position the close button */
+.imgcontainer {
+  text-align: center;
+  margin: 24px 0 12px 0;
+  position: relative;
+}
+
+img.avatar {
+  width: 25%;
+  border-radius: 50%;
+}
+
+.container {
+  padding: 16px;
+}
+
+span.password {
+  float: right;
+  padding-top: 16px;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  padding-top: 60px;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: #fefefe;
+  margin: 5% auto 15% auto; /* 5% from the top, 15% from the bottom and centered */
+  border: 1px solid #888;
+  width: 60%; /* Could be more or less, depending on screen size */
+}
+
+/* The Close Button (x) */
+.close {
+  position: absolute;
+  right: 25px;
+  top: 0;
+  color: #000;
+  font-size: 35px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: red;
+  cursor: pointer;
+}
+
+/* Add Zoom Animation */
+.animate {
+  -webkit-animation: animatezoom 0.6s;
+  animation: animatezoom 0.6s
+}
+
+@-webkit-keyframes animatezoom {
+  from {-webkit-transform: scale(0)} 
+  to {-webkit-transform: scale(1)}
+}
+  
+@keyframes animatezoom {
+  from {transform: scale(0)} 
+  to {transform: scale(1)}
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+  span.password {
+     display: block;
+     float: none;
+  }
+  .cancelbtn {
+     width: 100%;
+  }
+}
+</style>
+
+
+
+
+<div id="id01" class="modal">
+  
+  <form class="modal-content animate" action="../user/login_page.php" method="post">
+    <div class="imgcontainer">
+      <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+      <img src="../css4/img_avatar.jpg" alt="صورة رمزية" class="avatar">
+	</div>
+	<div style="font-size: 20px;margin-top: 10px" id="show"></div>
+    <input type="hidden" name="check" id="check" value="sended" />
+    <div class="container" style="direction: rtl;">
+      <label style="float: right;" for="user_name"><b>اسم المستخدم</b></label>
+      <input type="text" placeholder="ادخل اسم المستخدم" name="user_name" required>
+
+      <label style="float: right;" for="pass_word"><b>كلمة المرور</b></label>
+      <input type="password" placeholder="ادخل كلمة المرور" name="pass_word" required>
+        
+      <button onclick="add()" type="submit">تسجيل الدخول</button>
+
+    </div>
+
+  
+  </form>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById('id01');
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+</script>
 
 
 

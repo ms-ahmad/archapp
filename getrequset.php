@@ -3,7 +3,7 @@
 
 $Description   = isset($_REQUEST['Description']) ?  $_REQUEST['Description'] : '%';
 $person_ser    = isset($_REQUEST['person_ser']) ?   $_REQUEST['person_ser'] : '%';
-echo $date_from     = isset($_REQUEST['date_from']) ?    $_REQUEST['date_from'] : '%';
+ $date_from     = isset($_REQUEST['date_from']) ?    $_REQUEST['date_from'] : '%';
 $l_Access      = isset($_REQUEST['l_Access']) ?     $_REQUEST['l_Access'] : '%';
 $Lecturer      = isset($_REQUEST['Lecturer']) ?     $_REQUEST['Lecturer'] : '%';
 $Category      = isset($_REQUEST['Category']) ?     $_REQUEST['Category'] : '%';
@@ -21,7 +21,7 @@ if ($date_to=='%' || $date_to=="" || $date_to==null) {
  }
 
  if ($date_from=='%' || $date_from=="" || $date_from==null) {
-    echo $date_from="1800-01-01";
+     $date_from="1800-01-01";
 }
 $searchUrl     ="../search/search.php?";
 

@@ -1,2 +1,14 @@
-/image
-/files
+image/
+files/
+css4/
+css/
+!css4/site.css
+
+less/
+
+metadata/
+scss/
+svgs/
+webfonts/
+
+

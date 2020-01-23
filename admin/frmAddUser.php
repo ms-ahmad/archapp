@@ -107,22 +107,6 @@ if ($_POST) {
        }
    }
 
-print_r($event);
-echo "<br>";
-echo json_encode( $event ); 
-echo "<br>";
-
-echo "<br>";
-print_r($photo);
-echo "<br>";
-echo $string = serialize( $photo );
-echo "<br>";
-print_r($video);
-echo "<br>";
-print_r($audio);
-echo "<br>";
-
-
 }
 ?>
  <style>
@@ -151,7 +135,7 @@ echo "<br>";
     <div class="col-md-6  " style="text-align: center">
             <label for="username" class="col-sm-10 col-form-label">اسم المستخدم :</label>
             <div class="col-sm-10" style="text-align: center; margin:  20px auto ">
-                <input type="text" name="username" class="form-control" id="username" placeholder="اسم المستخدم">
+                <input type="text" name="username" class="form-control" id="username" placeholder="اسم المستخدم"  required />
             </div> 
                       
             </div>           
@@ -371,10 +355,10 @@ function showcb (chname,tabname) {
    },
    success: function(data)
       {
-        $("#err").html(data); 
-            // $("#form")[0].reset(); 
+        // $("#err").html(data); 
+        $("#form")[0].reset(); 
        
-        // alert(data);
+       alert(data);
       },
      error: function(e) 
       {

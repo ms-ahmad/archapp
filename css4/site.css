@@ -1,5 +1,15 @@
 .headerdiv{
     padding: 20px !important;
+    /* background-image: url("ahmad.jpg") ;
+    height: 200px;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position:right -100px;
+    background-blend-mode: color-burn;
+    background-size: 500px;
+    position: absolute;
+    opacity: 0.5;
+    width: 100%; */
 }
 form{
     padding: 10px;;
