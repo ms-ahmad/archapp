@@ -1,0 +1,41 @@
+/* .data-user {
+  width: 40%;
+  padding: 16px;
+  background: #f3f3f3;
+  border-radius: 10px;
+  margin: auto;
+  margin: 30px 414px !important;
+  border: 1px solid rgb(255, 11, 11);
+} */
+
+
+
+
+/* .hidn{
+ 
+  width:100%;
+  background-image: linear-gradient(to right bottom, #34222c, #2c202b, #251e29, #1e1c25, #191a21, #171a20, #16191e, #15191d, #161c1f, #171e21, #192122, #1b2323);
+  height: 1100px;
+  opacity: 1 ;
+  padding: 2px;
+} */
+
+
+.jut {
+  display: flex;
+  justify-content: center;
+  margin-top: 1em;
+
+}
+
+.pop {
+  border: 1px solid burlywood;
+  border-radius: 90px;
+  width: 50%;
+
+  height: 153px;
+  background: linear-gradient(216deg, rgb(3, 56, 89) 0%, rgb(3, 166, 150) 100%);
+}
+
+/* background: url('bg.jpg') no-repeat top center !important;
+} */
