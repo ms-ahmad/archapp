@@ -1,3 +1,7 @@
 salam
 salam 
 how are you?
+body{
+	font-size:20;
+	color:red;
+}
